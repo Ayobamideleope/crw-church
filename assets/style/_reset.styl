@@ -1,0 +1,42 @@
+.w-100 {
+  width: 100%;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.vw-100 {
+  width: 100vw;
+}
+
+.vh-100 {
+  height: 100vh;
+}
+
+.v-btn {
+  letter-spacing: 1.2px;
+}
+
+@supports (display: grid) {
+    .app-btn--slope-right {
+      clip-path: polygon(0 0, 100% 0, calc(100% - 11px) 100%, 0% 100%);
+      padding-right: 24px !important; // vuetify 16px + 8px slope
+      &.v-btn--large {
+        clip-path: polygon(0 0, 100% 0, calc(100% - 13px) 100%, 0% 100%);
+        padding-right: 42px !important; // vuetify 32px + 10px slope
+      }
+    }
+    .app-btn--slope-left {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 11px 100%);
+      padding-left: 24px !important; // vuetify 16px + 8px slope
+      &.v-btn--large {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 13px 100%);
+        padding-left: 42px !important; // vuetify 32px + 10px slope
+      }
+    }
+  }
+
+// .transition-slow {
+//   transition: all 0.7s $transition.swing;
+// }
